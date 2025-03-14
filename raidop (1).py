@@ -1,6 +1,5 @@
 import asyncio
 import random
-from userbot import bot as pandit
 from . import *
 
 NUMBER = ["0", "1"]
