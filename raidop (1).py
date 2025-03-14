@@ -1,8 +1,7 @@
 import asyncio
 import random
 from . import *
-
-NUMBER = ["0", "1"]
+["0", "1"]
 
 [
     "MADARCHOD TERI MAA KI CHUT ME GHUTKA KHAAKE THOOK DUNGA 🤣🤣",
