@@ -230,8 +230,8 @@ async def _(event):
             reply_to=event.message.id,
         )
 
-@pandit.on(admin_cmd(pattern="raidop(?: |$)(.*)"))
-@pandit.on(sudo_cmd(pattern="raidop(?: |$)(.*)", allow_sudo=True))
+@pandit.on(admin_cmd(pattern="poison(?: |$)(.*)"))
+@pandit.on(sudo_cmd(pattern="poison(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
@@ -262,8 +262,8 @@ async def _(event):
         await event.edit(f"TERI BHEN CHODUNGA AB DEKHTE JA. {username}")
 
 
-@pandit.on(admin_cmd(pattern="stopraid(?: |$)(.*)"))
-@pandit.on(sudo_cmd(pattern="stopraid(?: |$)(.*)", allow_sudo=True))
+@pandit.on(admin_cmd(pattern="poisonop(?: |$)(.*)"))
+@pandit.on(sudo_cmd(pattern="poisonop(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
