@@ -209,7 +209,7 @@ from . import *
     "TERI SEXY BAHEN KI CHUT OP",
 ]
 
-que = {}
+{}
 
 
 (admin_cmd(incoming=True))
