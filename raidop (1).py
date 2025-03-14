@@ -5,7 +5,7 @@ from . import *
 
 NUMBER = ["0", "1"]
 
-PANDIT = [
+[
     "MADARCHOD TERI MAA KI CHUT ME GHUTKA KHAAKE THOOK DUNGA 🤣🤣",
     "TERE BEHEN K CHUT ME CHAKU DAAL KAR CHUT KA KHOON KAR DUGA",
     "TERI VAHEEN NHI HAI KYA? 9 MAHINE RUK SAGI VAHEEN DETA HU 🤣🤣🤩",
@@ -214,8 +214,8 @@ PANDIT = [
 que = {}
 
 
-@pandit.on(admin_cmd(incoming=True))
-@pandit.on(sudo_cmd(incoming=True, allow_sudo=True))
+(admin_cmd(incoming=True))
+(sudo_cmd(incoming=True, allow_sudo=True))
 async def _(event):
     global que
     queue = que.get(event.sender_id)
@@ -226,12 +226,12 @@ async def _(event):
     async with event.client.action(event.chat_id, "typing"):
         await event.client.send_message(
             entity=event.chat_id,
-            message="""{}""".format(random.choice(PANDIT)),
+            message="""{}""".format(random.choice),
             reply_to=event.message.id,
         )
 
-@pandit.on(admin_cmd(pattern="poison(?: |$)(.*)"))
-@pandit.on(sudo_cmd(pattern="poison(?: |$)(.*)", allow_sudo=True))
+(admin_cmd(pattern="poison(?: |$)(.*)"))
+(sudo_cmd(pattern="poison(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
@@ -262,8 +262,8 @@ async def _(event):
         await event.edit(f"TERI BHEN CHODUNGA AB DEKHTE JA. {username}")
 
 
-@pandit.on(admin_cmd(pattern="poisonop(?: |$)(.*)"))
-@pandit.on(sudo_cmd(pattern="poisonop(?: |$)(.*)", allow_sudo=True))
+(admin_cmd(pattern="poisonop(?: |$)(.*)"))
+(sudo_cmd(pattern="poisonop(?: |$)(.*)", allow_sudo=True))
 async def _(event):
     global que
     if event.fwd_from:
